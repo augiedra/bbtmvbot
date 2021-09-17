@@ -81,6 +81,7 @@ func main() {
 	go func() {
 		time.Sleep(5 * time.Second) // Wait few seconds so Telegram bot starts up
 		for {
+			fmt.Println("Parsing again...")
 			go parseAruodas()
 			go parseSkelbiu()
 			go parseDomoplius()
@@ -88,6 +89,8 @@ func main() {
 			go parseRinka()
 			go parseKampas()
 			go parseNuomininkai()
+			nextScan := time.Now().Local().Add(time.Minute * 3)
+			fmt.Println("Next scan at: " + nextScan.Format("15:04:05"))
 			time.Sleep(3 * time.Minute)
 		}
 	}()

@@ -11,35 +11,35 @@ import (
 )
 
 const (
-	parseLinkAlio        = "https://www.alio.lt/paieska/?category_id=1393&city_id=228626&search_block=1&search[eq][adresas_1]=228626&order=ad_id"
-	parseLinkAruodas     = "https://m.aruodas.lt/?obj=4&FRegion=461&FDistrict=1&FOrder=AddDate&from_search=1&detailed_search=1&FShowOnly=FOwnerDbId0%2CFOwnerDbId1&act=search"
-	parseLinkDomoplius   = "https://m.domoplius.lt/skelbimai/butai?action_type=3&address_1=461&sell_price_from=&sell_price_to=&qt="
-	parseLinkKampas      = "https://www.kampas.lt/api/classifieds/search-new?query={%22municipality%22%3A%2258%22%2C%22settlement%22%3A19220%2C%22page%22%3A1%2C%22sort%22%3A%22new%22%2C%22section%22%3A%22bustas-nuomai%22%2C%22type%22%3A%22flat%22}"
-	parseLinkNuomininkai = "https://nuomininkai.lt/paieska/?propery_type=butu-nuoma&propery_contract_type=&propery_location=461&imic_property_district=&new_quartals=&min_price=&max_price=&min_price_meter=&max_price_meter=&min_area=&max_area=&rooms_from=&rooms_to=&high_from=&high_to=&floor_type=&irengimas=&building_type=&house_year_from=&house_year_to=&zm_skaicius=&lot_size_from=&lot_size_to=&by_date="
-	parseLinkRinka       = "https://www.rinka.lt/nekilnojamojo-turto-skelbimai/butu-nuoma?filter%5BKainaForAll%5D%5Bmin%5D=&filter%5BKainaForAll%5D%5Bmax%5D=&filter%5BNTnuomakambariuskaiciusButai%5D%5Bmin%5D=&filter%5BNTnuomakambariuskaiciusButai%5D%5Bmax%5D=&filter%5BNTnuomabendrasplotas%5D%5Bmin%5D=&filter%5BNTnuomabendrasplotas%5D%5Bmax%5D=&filter%5BNTnuomastatybosmetai%5D%5Bmin%5D=&filter%5BNTnuomastatybosmetai%5D%5Bmax%5D=&filter%5BNTnuomaaukstuskaicius%5D%5Bmin%5D=&filter%5BNTnuomaaukstuskaicius%5D%5Bmax%5D=&filter%5BNTnuomaaukstas%5D%5Bmin%5D=&filter%5BNTnuomaaukstas%5D%5Bmax%5D=&cities%5B0%5D=2&cities%5B1%5D=3"
-	parseLinkSkelbiu     = "https://www.skelbiu.lt/skelbimai/?cities=465&category_id=322&cities=465&district=0&cost_min=&cost_max=&status=0&space_min=&space_max=&rooms_min=&rooms_max=&building=0&year_min=&year_max=&floor_min=&floor_max=&floor_type=0&user_type=0&type=1&orderBy=1&import=2&keywords="
+	parseLinkAlio		 = "https://www.alio.lt/paieska/?category_id=1393&city_id=228822&search_block=1&search[eq][adresas_1]=228822&search[in][adresas_2][]=250583&search[in][adresas_2][]=250589&search[in][adresas_2][]=250577&search[in][adresas_2][]=353724&search[in][adresas_2][]=250580&search[in][adresas_2][]=353731&search[in][adresas_2][]=250591&search[in][adresas_2][]=250593&order=ad_id"
+	parseLinkAruodas     = "https://m.aruodas.lt/?obj=4&FRegion=43&FDistrict=6&FOrder=AddDate&from_search=1&detailed_search=1&FShowOnly=FOwnerDbId0%2CFOwnerDbId1&FQuartal=25%2C100%2C26%2C139%2C36%2C40%2C37&act=search"
+	parseLinkDomoplius   = "https://m.domoplius.lt/skelbimai/butai?action_type=3&address_1=43&category_id=1&address_2%5B3_1%5D=3_1&address_2%5B3_4%5D=3_4&address_2%5B3_5%5D=3_5&address_2%5B3_84%5D=3_84&address_2%5B3_93%5D=3_93&address_2%5B3_12%5D=3_12&address_2%5B3_13%5D=3_13&address_2%5B3_95%5D=3_95&qt="
+	parseLinkKampas      = "https://www.kampas.lt/api/classifieds/search-new?query={%22municipality%22%3A%2215%22%2C%22settlement%22%3A4188%2C%22page%22%3A1%2C%22sort%22%3A%22new%22%2C%22section%22%3A%22bustas-nuomai%22%2C%22type%22%3A%22flat%22}"
+	parseLinkNuomininkai = "https://nuomininkai.lt/paieska/?propery_type=butu-nuoma&propery_contract_type=&renter_type=&propery_location=43&imic_property_district=6&new_quartals=,25,100,26,139,36,39,37,40,&imic_property_quartals=&imic_property_streets=&min_price=&max_price=&min_price_meter=&max_price_meter=&min_area=&max_area=&floor_type=&building_type=&zm_skaicius=&rooms_from=&rooms_to=&irengimas=&house_year_from=&house_year_to=&lot_size_from=&lot_size_to=&by_date="
+	parseLinkRinka       = "https://www.rinka.lt/nekilnojamojo-turto-skelbimai/butu-nuoma?filter[KainaForAll][min]=&filter[KainaForAll][max]=&filter[NTnuomakambariuskaiciusButai][min]=&filter[NTnuomakambariuskaiciusButai][max]=&filter[NTnuomabendrasplotas][min]=&filter[NTnuomabendrasplotas][max]=&filter[NTnuomastatybosmetai][min]=&filter[NTnuomastatybosmetai][max]=&filter[NTnuomaaukstuskaicius][min]=&filter[NTnuomaaukstuskaicius][max]=&filter[NTnuomaaukstas][min]=&filter[NTnuomaaukstas][max]=&cities[0]=21"
+	parseLinkSkelbiu     = "https://www.skelbiu.lt/skelbimai/?import=2&district=6&quarter=25,100,26,139,36,39,40,37&cities=43&mainCity=1&search=1&category_id=322&type=1&visited_page=1&orderBy=1&detailsSearch=1"
 )
 
 func compileAddressWithStreet(district, street, houseNumber string) (address string) {
 	if district == "" {
-		address = "Vilnius"
+		address = "Kaunas"
 	} else if street == "" {
-		address = "Vilnius, " + district
+		address = "Kaunas, " + district
 	} else if houseNumber == "" {
-		address = "Vilnius, " + district + ", " + street
+		address = "Kaunas, " + district + ", " + street
 	} else {
-		address = "Vilnius, " + district + ", " + street + " " + houseNumber
+		address = "Kaunas, " + district + ", " + street + " " + houseNumber
 	}
 	return
 }
 
 func compileAddress(district, street string) (address string) {
 	if district == "" {
-		address = "Vilnius"
+		address = "Kaunas"
 	} else if street == "" {
-		address = "Vilnius, " + district
+		address = "Kaunas, " + district
 	} else {
-		address = "Vilnius, " + district + ", " + street
+		address = "Kaunas, " + district + ", " + street
 	}
 	return
 }
